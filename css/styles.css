@@ -129,6 +129,7 @@ body {
   display: flex;
   justify-content: center;
   flex-flow: column;
+  height: 100vh;
 }
 .containerStates {
   max-width: 1200px;
