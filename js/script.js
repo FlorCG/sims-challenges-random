@@ -1,6 +1,6 @@
-import { FAMILY_STRUCTURE } from "/data/familyStructure.js";
-import { NUMBER_OF_CHILDREN } from "/data/numberChildren.js";
-import { PRIMARY_INCOME } from "/data/primaryIncome.js";
+import { FAMILY_STRUCTURE } from "../data/familyStructure.js";
+import { NUMBER_OF_CHILDREN } from "../data/numberChildren.js";
+import { PRIMARY_INCOME } from "../data/primaryIncome.js";
 import { STANDARD_CAREER_LIST } from "../data/standardCareerList.js";
 import { NO_STANDARD_CAREER_LIST } from "../data/noStandardCareerList.js";
 import { PROFESSIONAL_LIST } from "../data/professionalList.js";
