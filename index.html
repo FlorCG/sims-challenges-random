@@ -7,19 +7,110 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>Randomize Sims 3</h1>
- 
-        <div class="randomizedContainer">
-      
-            <div class="item"><span class="itemTitle">Estructura Familiar: </span><span class="titleFamily"></span><button class="seeMore">Ver más info</button></div>
-            <div class="item"><span class="itemTitle">Cantidad de hijos: </span><span class="titleChildren"></span><button class="seeMore">Ver más info</button></div>
-            <div class="item"><span class="itemTitle careerType"></span><span class="titleCareer"></span><button class="seeMore">Ver más info</button></div>
-            <div class="item"><span class="itemTitle">Estructura Familiar: </span><span class="titleFamily">Padre soltero</span><button class="seeMore">Ver más info</button></div>
-            <div class="item"><span class="itemTitle">Estructura Familiar: </span><span class="titleFamily">Padre soltero</span><button class="seeMore">Ver más info</button></div>
-            <div class="item"><span class="itemTitle">Estructura Familiar: </span><span class="titleFamily">Padre soltero</span><button class="seeMore">Ver más info</button></div>
-       
-            <div class="containerBtn"><button class="generate">GENERAR</button></div>
+   <main>
+    <div class="generalContainer">
+
+        <div class="title">
+            <img class="imgPlumbob" src="./assets/sims3-icon.png" alt="icon-plumbob" />
+            <h1>RANDOMIZE CHALLENGE</h1>
         </div>
+
+        <div class="containerStates">
+            <div class="card">
+                <div class="insideCardbtn">
+                    <div class="btnContenedor">
+                        <a class="btnGuessFamily"><box-icon name='question-mark'></box-icon></a>
+                    </div>
+                    <div class="insideWithoutBtn">
+                    <span class="infoText textFamily">Presiona el botón para generar el tipo de familia del Sim</span>
+                    <button class="generateItem generateFamily">Generar tipo</button>
+                </div>
+                </div>
+                <div class="modal" id="modalFamilyType">
+                    <div class="modal-content">    
+                        <span class="closeFamily">&times;</span>
+                        <p class="textDescFamily"></p></div>
+                
+                   </div>
+            </div>
+            <div class="card">
+                <div class="insideCard">
+                    <span class="infoText textChildren">Presiona el botón para generar la cantidad de hijos del Sim</span>
+                    <button class="generateItem generateChildren">Generar cantidad</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="insideCard">
+                    <div class="twoText">
+                    <span class="infoText typeCareer">Presiona el botón para generar el trabajo del Sim</span>
+                    <span class="textCareer"></span>
+                </div>
+                    <button class="generateItem generateCareer">Generar oficio</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="insideCard">
+                    <span class="infoText careerPartner">Presiona el botón para generar el trabajo de la pareja del Sim (opcional)</span>
+                    <button class="generateItem generateCareerPartner">Generar oficio pareja</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="insideCardbtn">
+                    <div class="btnContenedor">
+                        <a class="btnGuessGoal"><box-icon name='question-mark'></box-icon></a>
+                    </div>
+                    <div class="insideWithoutBtn">
+                    <span class="infoText textGoal">Presiona el botón para generar el objetivo de la generación del Sim</span>
+                    <button class="generateItem generateGoal">Generar objetivo</button>
+                </div>
+            </div>
+                <div class="modal" id="modalGoal">
+                    <div class="modal-content">    
+                        <span class="closeGoal">&times;</span>
+                        <p class="textDescriptionGoal"></p></div>
+                
+                   </div>
+            </div>
+            <div class="card">
+                <div class="insideCard">
+                    <span class="infoText textLTW">Presiona el botón para generar el deseo de toda la vida del Sim</span>
+                    <button class="generateItem generateLTW">Generar deseo</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="insideCard">
+                    <span class="infoText textTraits">Presiona el botón para generar los rasgos del Sim</span>
+                    <button class="generateItem generateTraits">Generar rasgos</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="insideCardbtn">
+                    <div class="btnContenedor">
+                        <a class="btnGuess"><box-icon name='question-mark'></box-icon></a>
+                    </div>
+                  
+                <div class="insideWithoutBtn">
+                    
+                    <span class="infoText textMisc">Presiona el botón para generar diversión variada en el Sim</span>
+                    <button class="generateItem generateMisc">Generar diversión</button>
+                </div>
+            </div>
+            <div class="modal" id="modalMisc">
+                <div class="modal-content">    
+                    <span class="close">&times;</span>
+                    <p class="textDescriptionMisc"></p></div>
+            
+               </div>
+            </div>
+            <button class="generateItem generateEverything">¡RANDOMIZAR TODO!</button>
+        </div>
+
+
+    </div>
+</main>
+    <footer>
+        <p>Made with <box-icon type='solid' name='heart' class="iconHeart"></box-icon> by Florencia.</p>
+    </footer>
         
  
     <script type="module" src="data/familyStructure.js"></script>
@@ -27,6 +118,6 @@
     <script type="module" src="data/primaryIncome.js"></script>
     <script type="module" src="data/standardCareerList.js"></script>
     <script type="module" src="js/script.js"></script>
-   
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </body>
 </html>

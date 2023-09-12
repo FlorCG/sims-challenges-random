@@ -1,11 +1,11 @@
 const STANDARD_CAREER_LIST = [
   {
     title: "Negocios",
-    roll: [0],
+    roll: [1],
   },
   {
     title: "Criminal (Ladrón)",
-    roll: [1]
+    roll: [2]
   },
   {
     title: "Criminal (Malvado)",
@@ -81,15 +81,15 @@ const STANDARD_CAREER_LIST = [
   },
   {
     title: "Mánager de Deporte",
-    roll: [22]
+    roll: [21]
   },
   {
     title: "Astronomía (Astrofísica)",
-    roll: [23]
+    roll: [22]
   },
   {
     title: "Astronomía (Exploración espacial)",
-    roll: [24]
+    roll: [23]
   }
 ];
 
