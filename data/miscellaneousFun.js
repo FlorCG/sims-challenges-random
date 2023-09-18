@@ -6,7 +6,7 @@ const MISCELLANEOUS_FUN = [
     roll: [1],
   },
   {
-    title: "Ragos aleatorios",
+    title: "Rasgos aleatorios",
     description:
       "Haz clic en el botón aleatorio cada vez que te pidan que elijas rasgos. Esto se aplica al heredero de la generación actual.",
     roll: [2],

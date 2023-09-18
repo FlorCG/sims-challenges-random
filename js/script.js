@@ -1,6 +1,6 @@
-import { FAMILY_STRUCTURE } from "/data/familyStructure.js";
-import { NUMBER_OF_CHILDREN } from "/data/numberChildren.js";
-import { PRIMARY_INCOME } from "/data/primaryIncome.js";
+import { FAMILY_STRUCTURE } from "../data/familyStructure.js";
+import { NUMBER_OF_CHILDREN } from "../data/numberChildren.js";
+import { PRIMARY_INCOME } from "../data/primaryIncome.js";
 import { STANDARD_CAREER_LIST } from "../data/standardCareerList.js";
 import { NO_STANDARD_CAREER_LIST } from "../data/noStandardCareerList.js";
 import { PROFESSIONAL_LIST } from "../data/professionalList.js";
@@ -383,11 +383,6 @@ spanMisc.onclick = function () {
   modalMisc.style.display = "none";
 };
 
-window.onclick = function (event) {
-  if (event.target == modalMisc) {
-    modalMisc.style.display = "none";
-  }
-};
 
 //MODAL OBJETIVO
 
@@ -403,6 +398,12 @@ window.onclick = function (event) {
   if (event.target == modalGoal) {
     modalGoal.style.display = "none";
   }
+  if (event.target == modalFamilyType) {
+    modalFamilyType.style.display = "none";
+  }
+  if (event.target == modalMisc) {
+    modalMisc.style.display = "none";
+  }
 };
 //MODAL FAMILY TYPE
 
@@ -414,8 +415,3 @@ spanFamily.onclick = function () {
   modalFamilyType.style.display = "none";
 };
 
-window.onclick = function (event) {
-  if (event.target == modalFamilyType) {
-    modalFamilyType.style.display = "none";
-  }
-};
