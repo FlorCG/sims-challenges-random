@@ -12,6 +12,17 @@ import {
 import { ALL_CAREERS } from "../data/allCareers.js";
 import { LIFE_TIME_WISH_LIST } from "../data/lifeTimeWishes.js";
 import { TRAITS_LIST } from "../data/traitsList.js";
+import {  HAIR_LIST } from "../data/hairColor.js";
+import {  EYE_LIST } from "../data/eyeColor.js";
+import {  ZODIAC_LIST } from "../data/zodiacList.js";
+import {  REWARD_LIST } from "../data/reward.js";
+import {  WORLD_LIST } from "../data/worlds.js";
+import {  SKILL_LIST } from "../data/skills.js";
+import {  HIDDEN_SKILL_LIST } from "../data/hiddenSkill.js";
+import {  FOOD_LIST } from "../data/food.js";
+import {  MUSIC_LIST } from "../data/music.js";
+import {  STYLE_LIST } from "../data/style.js";
+
 
 const btnGenerateFamily = document.querySelector(".generateFamily");
 const textFamily = document.querySelector(".textFamily");
@@ -43,6 +54,36 @@ const btnGenerateMisc = document.querySelector(".generateMisc");
 const textMisc = document.querySelector(".textMisc");
 const textDescriptionMisc = document.querySelector(".textDescriptionMisc");
 
+const btnGenerateHairColor = document.querySelector(".generateHairColor");
+const textHairColor = document.querySelector(".textHairColor");
+
+const btnGenerateEyeColor = document.querySelector(".generateEyeColor");
+const textEyeColor = document.querySelector(".textEyeColor");
+
+const btnGenerateZodiac = document.querySelector(".generateZodiac");
+const textZodiac = document.querySelector(".textZodiac");
+
+const btnGenerateReward = document.querySelector(".generateReward");
+const textReward = document.querySelector(".textReward");
+
+const btnGenerateWorld = document.querySelector(".generateWorld");
+const textWorld = document.querySelector(".textWorld");
+
+const btnGenerateSkill = document.querySelector(".generateSkill");
+const textSkill = document.querySelector(".textSkill");
+
+const btnGenerateHiddenSkill = document.querySelector(".generateHiddenSkill");
+const textHiddenSkill = document.querySelector(".textHiddenSkill");
+
+const btnGenerateFood = document.querySelector(".generateFood");
+const textFood = document.querySelector(".textFood");
+
+const btnGenerateMusic = document.querySelector(".generateMusic");
+const textMusic = document.querySelector(".textMusic");
+
+const btnGenerateStyle = document.querySelector(".generateStyle");
+const textStyle = document.querySelector(".textStyle");
+
 const btnGenerateEverything = document.querySelector('.generateEverything');
 
 
@@ -61,6 +102,16 @@ btnGenerateEverything.addEventListener('click', e=>{
    generateLTW();
    generateTraits();
    generateMiscFun();
+   generateHairColor();
+   generateEyeColor();
+   generateZodiac();
+   generateReward();
+   generateWorld();
+   generateSkill();
+   generateHiddenSkill();
+   generateFood();
+   generateMusic();
+   generateStyle();
 })
 
 function generateFamily (){
@@ -133,6 +184,9 @@ function generateTraits(){
    textTraits.style.fontWeight = "bold";
 }
 
+
+
+
 function generateMiscFun(){
    clean(textMisc);
    let random = randomize(MISCELLANEOUS_FUN, textMisc);
@@ -149,6 +203,70 @@ function generateMiscFun(){
    }
    textMisc.style.fontWeight = "bold";
 }
+
+
+function generateHairColor(){
+  clean(textHairColor);
+  randomize(HAIR_LIST, textHairColor);
+  textHairColor.style.fontWeight = "bold";
+}
+
+
+function generateEyeColor(){
+  clean(textEyeColor);
+  randomize(EYE_LIST, textEyeColor);
+  textEyeColor.style.fontWeight = "bold";
+}
+
+function generateZodiac(){
+  clean(textZodiac);
+  randomize(ZODIAC_LIST, textZodiac);
+  textZodiac.style.fontWeight = "bold";
+}
+
+function generateReward(){
+  clean(textReward);
+  randomize(REWARD_LIST, textReward);
+  textReward.style.fontWeight = "bold";
+}
+
+function generateWorld(){
+  clean(textWorld);
+  randomize(WORLD_LIST, textWorld);
+  textWorld.style.fontWeight = "bold";
+}
+
+function generateSkill(){
+  clean(textSkill);
+  randomize(SKILL_LIST, textSkill);
+  textSkill.style.fontWeight = "bold";
+}
+
+function generateHiddenSkill(){
+  clean(textHiddenSkill);
+  randomize(HIDDEN_SKILL_LIST, textHiddenSkill);
+  textHiddenSkill.style.fontWeight = "bold";
+}
+
+function generateFood(){
+  clean(textFood);
+  randomize(FOOD_LIST, textFood);
+  textFood.style.fontWeight = "bold";
+}
+
+function generateMusic(){
+  clean(textMusic);
+  randomize(MUSIC_LIST, textMusic);
+  textMusic.style.fontWeight = "bold";
+}
+
+function generateStyle(){
+  clean(textStyle);
+  randomize(STYLE_LIST, textStyle);
+  textStyle.style.fontWeight = "bold";
+}
+
+
 
 //EVENT LISTENERS
 
@@ -190,6 +308,56 @@ btnGenerateGoal.addEventListener("click", (e) => {
   e.preventDefault();
   generateMiscFun();
 });
+
+btnGenerateHairColor.addEventListener("click", (e) =>{
+  e.preventDefault();
+  generateHairColor();
+})
+
+btnGenerateEyeColor.addEventListener("click", (e) =>{
+  e.preventDefault();
+  generateEyeColor();
+})
+
+btnGenerateZodiac.addEventListener("click", (e) =>{
+  e.preventDefault();
+  generateZodiac();
+})
+
+btnGenerateReward.addEventListener("click", (e) =>{
+  e.preventDefault();
+  generateReward();
+})
+
+btnGenerateWorld.addEventListener("click", (e) =>{
+  e.preventDefault();
+  generateWorld();
+})
+
+btnGenerateSkill.addEventListener("click", (e) =>{
+  e.preventDefault();
+  generateSkill();
+})
+
+btnGenerateHiddenSkill.addEventListener("click", (e) =>{
+  e.preventDefault();
+  generateHiddenSkill();
+})
+
+btnGenerateFood.addEventListener("click", (e) =>{
+  e.preventDefault();
+  generateFood();
+})
+
+btnGenerateMusic.addEventListener("click", (e) =>{
+  e.preventDefault();
+  generateMusic();
+})
+
+btnGenerateStyle.addEventListener("click", (e) =>{
+  e.preventDefault();
+  generateStyle();
+})
 
 
 //FUNCTIONS
@@ -316,7 +484,7 @@ function randomize(listObjects, containerText) {
         textDescriptionGoal.appendChild(elem);
       }
       //Agrega description a Family Structure
-      if (listObjects === FAMILY_STRUCTURE) {
+      if (listObjects === FAMILY_STRUCTURE ) {
         clean(textDescFamily);
         let elem = document.createElement("p");
         let textoType = objeto.description;
@@ -343,7 +511,17 @@ function randomize(listObjects, containerText) {
       if (
         listObjects === PRIMARY_INCOME ||
         listObjects === GENERATIONAL_GOAL ||
-        listObjects === MISCELLANEOUS_FUN
+        listObjects === MISCELLANEOUS_FUN ||
+        listObjects === HAIR_LIST ||
+        listObjects === EYE_LIST ||
+        listObjects === ZODIAC_LIST ||
+        listObjects === REWARD_LIST ||
+        listObjects === WORLD_LIST ||
+        listObjects === SKILL_LIST  ||
+        listObjects === HIDDEN_SKILL_LIST  ||
+        listObjects === FOOD_LIST  ||
+        listObjects === MUSIC_LIST ||
+        listObjects === STYLE_LIST
       ) {
         return random;
       }

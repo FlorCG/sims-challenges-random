@@ -166,6 +166,7 @@ body {
   align-items: center;
   text-align: center;
   justify-content: space-evenly;
+
 }
 
 .insideCardbtn {
@@ -175,6 +176,8 @@ body {
   border-radius: 10px;
   background: linear-gradient(180deg, #96c9ff 0%, #96c7ff 100%);
   box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+   
+
 }
 
 .card {
@@ -188,6 +191,11 @@ body {
     #325289 94.44%
   );
   box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.25);
+  
+}
+
+.infoText {
+  padding: 0 15px;
 }
 
 .generateItem {
